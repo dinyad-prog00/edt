@@ -1,6 +1,3 @@
-import 'package:edt/src/models/calendar.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 /*
 final ing3 = Uri.https(
     'edt.univ-littoral.fr', 'jsp/custom/modules/plannings/anonymous_cal.jsp', {

@@ -40,6 +40,7 @@ class _CalendarCheckboxState extends State<CalendarCheckbox> {
               } else {
                 edtNotifier.removeCalendar(widget.calendar.id);
               }
+              // ignore: unnecessary_null_comparison
               if (_value != null) {
                 edtNotifier.localBdManager
                     .setCalendarChecked(widget.calendar.id, value!);

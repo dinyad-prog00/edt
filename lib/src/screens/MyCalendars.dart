@@ -1,12 +1,9 @@
-import 'package:edt/src/db/local_db.dart';
 import 'package:edt/src/screens/add_calendar.dart';
 import 'package:edt/src/services/notifier.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:provider/provider.dart';
 
-import '../constants/urls.dart';
 import '../widgets/CalendarCheckbox.dart';
 
 class MyCalendars extends StatefulWidget {

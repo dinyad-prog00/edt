@@ -1,4 +1,5 @@
-import 'package:edt/src/extensions/color_extension.dart';
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:edt/src/models/calendar.dart';
 import 'package:edt/src/screens/qr_scanner.dart';
 import 'package:edt/src/services/notifier.dart';
@@ -24,7 +25,6 @@ class _AddCalendarState extends State<AddCalendar> {
   final _controllerUrl = TextEditingController();
   late String _url;
   late String _name;
-  late String _color;
   Color color = Colors.blue;
   @override
   Widget build(BuildContext context) {
@@ -165,7 +165,6 @@ class _AddCalendarState extends State<AddCalendar> {
                                 onColorChanged: ((value) {
                                   setState(() {
                                     color = value;
-                                    _color = color.toHexString();
                                   });
                                   Navigator.pop(context);
                                 }),

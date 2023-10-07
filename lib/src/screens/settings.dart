@@ -1,11 +1,9 @@
-import 'package:edt/src/constants/urls.dart';
 import 'package:edt/src/screens/MyCalendars.dart';
-import 'package:edt/src/screens/add_calendar.dart';
-import 'package:edt/src/widgets/CalendarCheckbox.dart';
+import 'package:edt/src/services/notifier.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/leading_icon.dart';
 import '../widgets/settings_group.dart';
@@ -20,6 +18,7 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
+    EdtNotifier edtNotifier = Provider.of<EdtNotifier>(context);
     return Scaffold(
       appBar: AppBar(title: Text("Paramètres")),
       body: ListView(
@@ -41,7 +40,25 @@ class _SettingsState extends State<Settings> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: const Divider(),
-          ),
+          )
+,
+          ListTile(
+              leading: leadingIcon(
+                icon: Icons.weekend,
+                bgColor: Colors.blue,
+              ),
+              title: Text("Afficher le week-end"),
+              trailing: Switch(value: edtNotifier.settings.showWeekends, onChanged:(value) {
+                edtNotifier.setShowWeeks(value);
+              },),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyCalendars()));
+              },
+            ),
+          
+
+
 
           // ...List.generate(calendars.length, ((index) {
           //   return CalendarCheckbox(calendar: calendars[index]);

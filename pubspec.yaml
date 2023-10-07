@@ -47,6 +47,8 @@ dependencies:
   im_stepper: ^1.0.1+1
   sqflite: ^2.2.8+4
   flutter_colorpicker: ^1.0.3
+  week_of_year: ^2.2.0
+  shared_preferences: ^2.2.1
 
 dev_dependencies:
   flutter_test:

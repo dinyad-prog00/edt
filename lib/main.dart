@@ -1,11 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:calendar_view/calendar_view.dart';
-import 'package:edt/src/constants/urls.dart';
-import 'package:edt/src/models/event.dart';
 import 'package:edt/src/screens/calendar_view.dart';
-import 'package:edt/src/services/calendar_sync.dart';
 import 'package:edt/src/services/notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
